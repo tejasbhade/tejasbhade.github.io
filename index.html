@@ -92,6 +92,29 @@
             animation-delay: 0.4s;
         }
         
+        /* Home section background */
+        .home-background {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 197, 253, 0.1) 100%), 
+                        url('images/projects/home.jpg') center/cover no-repeat;
+            position: relative;
+        }
+        
+        .home-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.75);
+            z-index: 1;
+        }
+        
+        .home-content {
+            position: relative;
+            z-index: 2;
+        }
+        
         .skill-bar {
             height: 8px;
             border-radius: 4px;
@@ -145,11 +168,11 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center pt-20">
-        <div class="container mx-auto px-6 py-16 md:py-24">
+    <section id="home" class="min-h-screen flex items-center pt-20 home-background">
+        <div class="container mx-auto px-6 py-16 md:py-24 home-content">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-12 md:mb-0 animate-fade-in">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Hi, I'm <span class="text-blue-200">Tejas Bhade</span></h1>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-400">Hi, I'm <span class="text-gray-900">Tejas </span></h1>
                     <h2 class="text-2xl md:text-3xl text-gray-600 mb-6">Robotics Engineer</h2>
                     <p class="text-gray-600 mb-8 max-w-lg">Passionate about designing innovative automation solutions that solve real-world challenges. Skilled in ROS2, Python, C/C++, and CAD/CAE tools with hands-on experience in robotics and mechanical systems.</p>
                     <div class="flex space-x-4">
@@ -180,8 +203,8 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
+    <section id="about" class="py-20 about-background">
+        <div class="container mx-auto px-6 about-content">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">About <span class="text-blue-200">Me</span></h2>
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center animate-fade-in">
