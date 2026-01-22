@@ -26,3 +26,20 @@ p {
 .card p:last-child {
 	margin-bottom: 0;
 }
+
+/* Project card alignment fix */
+.project-card {
+	display: flex !important;
+	flex-direction: column !important;
+	height: 100%;
+}
+
+.project-card .p-6 {
+	display: flex !important;
+	flex-direction: column !important;
+	flex-grow: 1 !important;
+}
+
+.project-card .p-6 > p.text-gray-600 {
+	flex-grow: 1 !important;
+}
